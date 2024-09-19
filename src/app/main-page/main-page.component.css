@@ -1,0 +1,41 @@
+.container-main {
+  background-color: #dbdbdb;
+  flex-direction: column;
+  color: #1f1e1e;
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+}
+
+.container-main h2 {
+  font-size: 48px;
+}
+
+.container-main p {
+  font-size: 48px;
+  color: #ae0909;
+}
+
+.container-main img {
+  padding: 0 1rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  border: 1px solid black;
+  width: 10vw;
+}
+
+.container-main a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1f1e1e;
+  color: #dbdbdb;
+  font-size: 30px;
+  padding: 1rem;
+  border-radius: 10%;
+  text-align: center;
+  margin: 1rem;
+}
