@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background-color: #1f1e1e;
+}
+.title {
+  text-align: center;
+  color: whitesmoke;
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+.rock-scissors {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.play {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 36px;
+  background-color: whitesmoke;
+  width: 150px;
+  height: 50px;
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
