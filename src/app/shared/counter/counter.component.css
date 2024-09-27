@@ -1,0 +1,42 @@
+.counter {
+  right: 3rem;
+  top: 3rem;
+  position: absolute;
+}
+
+table,
+th,
+td {
+  border: 2px solid whitesmoke;
+}
+
+table {
+  width: 200px;
+  text-align: center;
+  font-family: "Jaro", sans-serif;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  background-color: black;
+  color: white;
+  font-size: 36px;
+}
+
+tr {
+  font-size: 24px;
+  color: white;
+}
+
+.machine {
+  background-color: #ae0909;
+}
+
+.human {
+  background-color: #1b7c2a;
+}
