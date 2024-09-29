@@ -1,10 +1,21 @@
-<div class="">
+<div>
   <app-counter></app-counter>
   <section class="container-main">
-    <h2>CHOOSE AN OPTION</h2>
-    <app-cards></app-cards>
-    <p>YOU ARE THE LOSER</p>
-    <img src="../../assets/figures/piedra.png" alt="" />
-    <a href="#">TRY AGAIN</a>
+    <div>
+      <h2>CHOOSE AN OPTION</h2>
+      <app-cards (cardselect)="play($event)"></app-cards>
+      <div *ngIf="countdown > 0">
+        <p>Result in... {{ countdown }} seconds</p>
+      </div>
+    </div>
+    <div *ngIf="countdown === 0" class="machine-result-container">
+      <p>{{ resultMessage }}</p>
+      <img
+        *ngIf="machineChoice"
+        [src]="getImage(machineChoice)"
+        alt="Machine choice"
+      />
+      <a href="#" *ngIf="showResults" (click)="resetGame()">TRY AGAIN</a>
+    </div>
   </section>
 </div>
