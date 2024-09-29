@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { CounterComponent } from '../shared/counter/counter.component';
 
 @Component({
   selector: 'app-main-page',
@@ -12,8 +13,8 @@ export class MainPageComponent {
   machineChoice: string = '';
   resultMessage: string = '';
   showResults: boolean = false;
-  humanScore: number = 0;
-  machineScore: number = 0;
+
+  @ViewChild(CounterComponent) counter!: CounterComponent;
 
   play(userChoice: string) {
     this.humanChoice = userChoice;
@@ -24,7 +25,7 @@ export class MainPageComponent {
       if (this.countdown === 0) {
         clearInterval(countdownInterval);
         this.determineWinner();
-        this.showResults = true; // Muestra el resultado cuando se determina el ganador
+        this.showResults = true;
       }
     }, 1000);
   }
@@ -35,16 +36,17 @@ export class MainPageComponent {
 
     if (this.humanChoice === this.machineChoice) {
       this.resultMessage = 'seriously you tied with the machine🤨🤨';
+      // No sumamos puntos en caso de empate
     } else if (
       (this.humanChoice === 'rock' && this.machineChoice === 'scissors') ||
       (this.humanChoice === 'paper' && this.machineChoice === 'rock') ||
       (this.humanChoice === 'scissors' && this.machineChoice === 'paper')
     ) {
       this.resultMessage = 'You are a fucking winner !!!!😎😎 ';
-      this.humanScore++;
+      this.counter.incrementHumanScore();
     } else {
       this.resultMessage = 'You are a loser!!!!😂😂';
-      this.machineScore++;
+      this.counter.incrementMachineScore();
     }
   }
 

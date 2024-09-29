@@ -61,10 +61,23 @@
   margin-bottom: 1rem;
 }
 
+
 .machine-result-container p {
   margin-bottom: 1rem;
 }
 
 a {
   cursor: pointer;
+}
+
+.machine-result-container a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1f1e1e;
+  color: #dbdbdb;
+  font-size: 30px;
+  padding: 1rem;
+  border-radius: 10%;
+  text-align: center;
+  margin-top: 1rem;
 }
