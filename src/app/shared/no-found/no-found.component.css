@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #ae0909;
+}
+
+.container {
+  background-color: #dbdbdb;
+  flex-direction: row;
+  color: #1f1e1e;
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  max-width: 50%;
+}
+
+.message {
+  padding: 3rem;
+}
+
+.message p {
+  font-size: 1.5rem;
+}
+
+/* Estilos para el enlace <a> */
+.message a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1f1e1e;
+  color: #dbdbdb;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efecto hover para el enlace */
+.message a:hover {
+  background-color: #333333;
+}
