@@ -20,7 +20,7 @@
 
 .container-main h2 {
   font-size: 48px;
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .container-main p {
@@ -53,12 +53,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .machine-result-container img {
   width: 10vw;
   margin-bottom: 1rem;
+}
+
+
+.machine-result-container p {
+  margin-bottom: 1rem;
+}
+
+a {
+  cursor: pointer;
 }
 
 .machine-result-container a {
