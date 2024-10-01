@@ -2,7 +2,7 @@
   <app-counter></app-counter>
   <section class="container-main">
     <div>
-      <h2>CHOOSE AN OPTION</h2>
+      <h2>{{ "CHOOSE AN OPTION" | uppercase }}</h2>
       <app-cards (cardselect)="play($event)"></app-cards>
       <!--  -->
       <div *ngIf="countdown > 0" class="countdown">

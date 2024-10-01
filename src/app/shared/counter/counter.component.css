@@ -1,3 +1,4 @@
+/* Estilos globales */
 .counter {
   right: 3rem;
   top: 3rem;
@@ -39,4 +40,56 @@ tr {
 
 .human {
   background-color: #1b7c2a;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* X-Large devices (large desktops, 1200px y más) */
+@media (max-width: 1399.98px) {
+  /* Estilos para pantallas un poco más pequeñas */
+}
+
+/* Large devices (desktops, 992px y más) */
+@media (max-width: 1199.98px) {
+  /* Estilos para pantallas de tamaño estándar */
+}
+
+/* Medium devices (tablets, 768px y más) */
+@media (max-width: 991.98px) {
+  /* Estilos para tablets */
+  .counter {
+    left: auto;
+    bottom: 1rem;
+    right: 1rem;
+    top: auto;
+    position: fixed; /* Mantener en la esquina inferior derecha */
+  }
+
+  table {
+    width: 100px;
+  }
+
+  th,
+  tr {
+    font-size: 1rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px y más) */
+@media (max-width: 767.98px) {
+  /* Estilos para teléfonos en modo apaisado */
+
+  table {
+    width: 100px;
+  }
+
+  th,
+  tr {
+    font-size: 1rem;
+  }
+}
+
+/* X-Small devices (portrait phones, menos de 576px) */
+@media (max-width: 575.98px) {
+  /* Estilos para teléfonos en modo retrato */
 }
