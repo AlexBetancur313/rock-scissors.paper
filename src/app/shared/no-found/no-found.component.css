@@ -16,7 +16,7 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -60,7 +60,7 @@ img {
 /* X-Large devices (large desktops, 1200px y más) */
 @media (max-width: 1399.98px) {
   .container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
   img {
