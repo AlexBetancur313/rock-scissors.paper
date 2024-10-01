@@ -1,17 +1,19 @@
+/* Reset básico */
 * {
   padding: 0;
   margin: 0;
 }
 
+/* Estilos generales */
 .container-main {
   background-color: #dbdbdb;
-  flex-direction: column;
   color: #1f1e1e;
   font-family: "Jaro", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
   text-align: center;
@@ -36,7 +38,8 @@
   width: 5vw;
 }
 
-.container-main a {
+.container-main a,
+.machine-result-container a {
   display: inline-block;
   text-decoration: none;
   background-color: #1f1e1e;
@@ -53,14 +56,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin-top: 2rem; */
 }
 
 .machine-result-container img {
   width: 10vw;
   margin-bottom: 1rem;
 }
-
 
 .machine-result-container p {
   margin-bottom: 1rem;
@@ -70,14 +71,38 @@ a {
   cursor: pointer;
 }
 
-.machine-result-container a {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #1f1e1e;
-  color: #dbdbdb;
-  font-size: 30px;
-  padding: 1rem;
-  border-radius: 10%;
-  text-align: center;
-  margin-top: 1rem;
+/* RESPONSIVE DESIGN */
+
+/* X-Large devices (large desktops, 1200px y más) */
+@media (max-width: 1399.98px) {
+  /* estilos para pantallas un poco más pequeñas */
+}
+
+/* Large devices (desktops, 992px y más) */
+@media (max-width: 1199.98px) {
+  /* estilos para pantallas de tamaño estándar */
+}
+
+/* Medium devices (tablets, 768px y más) */
+@media (max-width: 991.98px) {
+  /* estilos para tablets */
+}
+
+/* Small devices (landscape phones, 576px y más) */
+@media (max-width: 767.98px) {
+  /* Estilos para teléfonos en modo apaisado */
+  .machine-result-container {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .machine-result-container img {
+    width: 25vw;
+    margin: 1rem;
+  }
+}
+
+/* X-Small devices (portrait phones, menos de 576px) */
+@media (max-width: 575.98px) {
+  /* Estilos para teléfonos en modo retrato */
 }
