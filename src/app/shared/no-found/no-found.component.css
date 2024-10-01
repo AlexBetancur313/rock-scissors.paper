@@ -16,14 +16,17 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  display: flex;
-  justify-content: start;
-  align-items: center;
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 img {
   max-width: 50%;
+  height: auto;
 }
 
 .message {
@@ -52,4 +55,102 @@ img {
 /* Efecto hover para el enlace */
 .message a:hover {
   background-color: #333333;
+}
+
+/* X-Large devices (large desktops, 1200px y más) */
+@media (max-width: 1399.98px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    max-width: 50%;
+  }
+  .message {
+    padding: 2.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px y más) */
+@media (max-width: 1199.98px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    max-width: 80%;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  .message p {
+    font-size: 2cqi;
+  }
+  .message a {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px y más) */
+@media (max-width: 991.98px) {
+  h1 {
+    font-size: 3rem;
+  }
+  img {
+    max-width: 80%;
+  }
+  .message p {
+    font-size: 1.3rem;
+  }
+  .message a {
+    font-size: 1.3rem;
+  }
+  .message {
+    padding: 2rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px y más) */
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  img {
+    max-width: 50%;
+  }
+  .message p {
+    font-size: 1.2rem;
+  }
+  .message a {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.6rem;
+  }
+  .message {
+    padding: 1.5rem;
+  }
+}
+
+/* X-Small devices (portrait phones, menos de 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  img {
+    max-width: 90%;
+  }
+  .message p {
+    font-size: 1rem;
+  }
+  .message a {
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+  }
+  .message {
+    padding: 1rem;
+  }
 }
