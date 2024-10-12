@@ -1,27 +1,60 @@
-# RockScissorsPaper
+# Piedra, Papel o Tijera
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Este proyecto es una implementación simple del juego clásico "Piedra, Papel o Tijera" usando **Angular** y **TypeScript**. El juego permite a los usuarios jugar contra la máquina, mostrando el resultado visualmente, y lleva un registro de los puntajes tanto de la máquina como del jugador humano.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Selección de Opciones**: Se puede elegir entre las tres opciones clásicas: piedra, papel, o tijera.
+- **Juego contra la Máquina**: El resultado se compara con una acción aleatoria de la máquina.
+- **Contador de Puntos**: Un marcador que actualiza los puntajes de la máquina y del jugador a medida que avanza la partida.
+- **Sistema de Reinicio**: Al salirse o recargar la pagina, el contador se reinicia automáticamente.
 
-## Code scaffolding
+## Tecnologías Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**: Framework de JavaScript para desarrollar aplicaciones web.
+- **TypeScript**: Lenguaje de programación basado en JavaScript.
+- **CSS**: Para el estilo y diseño de la interfaz.
+- **HTML**: Para la estructura de la página.
 
-## Build
+## Estructura del Proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **main-page.component.ts**: Componente encargado de la lógica principal del juego, que maneja la interacción del usuario, el conteo de segundos antes de que la mauina muestre su elección, y la determinación del ganador.
+- **counter.component.ts**: Componente encargado de ir acumulando los puntos de la maquina y el usuario segun vayan ganando.
+- **app-cards**: Componente encargado de mostrar las opciones del juego (piedra, papel, tijera) que el usuario podra seleccionar.
+- **welcome**: Componente encargado de mostrar la bienvenida del juego piedra, papel y tijera.
+- **no-found**: Componente encargado de mostrar que la pagina no fue hallada en caso de que le link este mal escrito.
 
-## Running unit tests
+## Uso
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Iniciar una partida
 
-## Running end-to-end tests
+1. El usuario debera dar click en "PLAY" para entrar en el juego.
+2. El usuario debera seleccionar una de las opciones disponibles (piedra, papel o tijera) haciendo clic en la imagen correspondiente.
+3. El juego mostrará una cuenta regresiva y luego la máquina seleccionará su opción.
+4. El resultado se mostrará y el contador actualizará los puntajes, solo se actualizara dicho contador si uno de los dos gana si empatan no habra punto para ninguno.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Reiniciar el juego
 
-## Further help
+Al terminar una partida, el usuario podra reiniciar el juego haciendo clic en el enlace "TRY AGAIN" que aparece después de mostrar los resultados.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Código Importante
+
+### main-page.component.ts
+
+Este archivo contiene la lógica principal del juego:
+
+- **Método `play`**: Inicia el juego y gestiona la cuenta regresiva antes de mostrar el resultado.
+- **Método `determineWinner`**: Determina el ganador entre el usuario y la máquina.
+- **Método `resetGame`**: Reinicia el juego para permitir una nueva partida.
+
+### counter.component.ts
+
+Este componente se encarga de manejar el marcador de la máquina y el usuario. Los métodos importantes incluyen:
+
+- **`incrementHumanScore`**: Incrementa el puntaje del jugador usuario.
+- **`incrementMachineScore`**: Incrementa el puntaje de la máquina.
+
+## Estilos y Diseño
+
+- La aplicación utiliza estilos CSS personalizados para mantener una estética limpia y amigable.
+- Los puntajes se presentan en una tabla y las opciones de juego se muestran mediante imágenes que representan piedra, papel o tijera.
